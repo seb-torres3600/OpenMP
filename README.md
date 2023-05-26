@@ -70,22 +70,6 @@ cmp --silent myoutput.txt testsoln.txt && echo "Same!" || echo "Different!"
 ```
 
 
-How we will grade your code:
-```
-### Generate a test file
-### (of unspecified range and size)
-shuf -i0-2147483643 -n382 > case1.txt
-
-### Sort it using sort
-sort -n case1.txt > soln1.txt
-
-### Run your mysort program to also sort the test file
-./mysort case1.txt -o your1.txt --alg=merge
-
-### Compare test results
-cmp --silent your1.txt soln1.txt && echo "Pass (5pts)" || echo "Fail (0pts)"
-```
-
 ### Ease:
 I feel like using OpenMP is much simpler to use than threads. I always used the newer version of threads,
 compared to the regular pthread, thread package is much simpler to use. But using OpenMp is much easier than both, 
